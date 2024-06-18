@@ -6,8 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Transaction implements Serializable {
-    private static final String filePathForBinDat = "PROJECT/src/main/resources/Data/transactions.bin";
-    private static final String filePathForCsvDat = "PROJECT/src/main/resources/Data/transactions.csv";
+    private static final String filePathForBinDat = "src/main/resources/Data/transactions.bin";
+    private static final String filePathForCsvDat = "src/main/resources/Data/transactions.csv";
     private static final String SUCCESSFUL_TRANSACTION = "success";
     private static final String CANCELLED_TRANSACTION = "cancelled";
     private static final String OUT_OF_STOCK_TRANSACTION = "stockError";

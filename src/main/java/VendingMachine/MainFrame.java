@@ -56,7 +56,7 @@ public class MainFrame extends JFrame {
     }
 
     private void setLogo() {
-        ImageIcon imageIcon = new ImageIcon("PROJECT/src/main/resources/Images/vending-machine.png");
+        ImageIcon imageIcon = new ImageIcon("src/main/resources/Images/vending-machine.png");
         setIconImage(imageIcon.getImage());
     }
 
