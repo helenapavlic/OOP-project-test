@@ -1,5 +1,10 @@
 package VendingMachine;
 
+import Admin.AdminMainFrame;
+import AdminLogin.AdminLoginEvent;
+import AdminLogin.AdminLoginFrame;
+import AdminLogin.AdminLoginListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -88,6 +93,19 @@ public class MainFrame extends JFrame {
                     totalMoneyInserted = 0.0f;
 
                 } else if (buttonPressed.equals("ADMIN")) {
+                    AdminLoginFrame adminLoginFrame = new AdminLoginFrame();
+                    adminLoginFrame.setAdminLoginListener(new AdminLoginListener() {
+                        @Override
+                        public void adminLoginEventOccurred(AdminLoginEvent event) {
+                            boolean isSuccess = event.isLoginSuccessful();
+                            if (isSuccess){
+//                                OPEN ADMIN FRAME
+                                new AdminMainFrame();
+                                System.out.println("SUCCESS");
+                            }
+                        }
+                    });
+
 //                    admin!!
                 }
 
