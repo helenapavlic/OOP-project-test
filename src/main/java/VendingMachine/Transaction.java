@@ -66,6 +66,7 @@ public class Transaction implements Serializable {
             }
         }
         transactions.add(this);
+        System.out.println(this);
         AUX_CLS.saveTransactions(transactions, filePathForBinDat);
         AUX_CLS.saveTransactionsToCSV(transactions, filePathForCsvDat);
     }
@@ -99,6 +100,7 @@ public class Transaction implements Serializable {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.remainingQuantity = remainingQuantity;
+        System.out.println(this);
     }
 
     public static ArrayList<Transaction> getTransactions() {
